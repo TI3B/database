@@ -15,10 +15,10 @@ class Booking_gedung extends CI_Controller {
 		echo  json_encode($booking_gedung);
 	}
 
-	function getBy($id, $key)
+	function getBy($field, $data, $key)
 	{
 		$this->keyrest->key($key);
-		$booking_gedung = $this->booking_gedung_m->selectBy('kd_booking_gedung', $id);
+		$booking_gedung = $this->booking_gedung_m->selectBy($field, $data);
 		echo  json_encode($booking_gedung);
 	}
 

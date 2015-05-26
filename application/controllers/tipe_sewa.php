@@ -15,10 +15,10 @@ class Tipe_sewa extends CI_Controller {
 		echo  json_encode($tipe_sewa);
 	}
 
-	function getBy($id, $key)
+	function getBy($field, $data, $key)
 	{
 		$this->keyrest->key($key);
-		$tipe_sewa = $this->tipe_sewa_m->selectBy('kd_tipe_sewa', $id);
+		$tipe_sewa = $this->tipe_sewa_m->selectBy($field, $data);
 		echo  json_encode($tipe_sewa);
 	}
 

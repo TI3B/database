@@ -15,10 +15,10 @@ class Data_penginap extends CI_Controller {
 		echo  json_encode($data_penginap);
 	}
 
-	function getBy($id, $key)
+	function getBy($field, $data, $key)
 	{
 		$this->keyrest->key($key);
-		$data_penginap = $this->data_penginap_m->selectBy('kd_data_penginap', $id);
+		$data_penginap = $this->data_penginap_m->selectBy($field, $data);
 		echo  json_encode($data_penginap);
 	}
 

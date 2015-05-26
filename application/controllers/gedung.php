@@ -15,10 +15,10 @@ class Gedung extends CI_Controller {
 		echo  json_encode($gedung);
 	}
 
-	function getBy($id, $key)
+	function getBy($field, $data, $key)
 	{
 		$this->keyrest->key($key);
-		$gedung = $this->gedung_m->selectBy('kd_gedung', $id);
+		$gedung = $this->gedung_m->selectBy($field, $data);
 		echo  json_encode($gedung);
 	}
 

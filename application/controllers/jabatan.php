@@ -15,10 +15,10 @@ class Jabatan extends CI_Controller {
 		echo  json_encode($jabatan);
 	}
 
-	function getBy($id, $key)
+	function getBy($field, $data, $key)
 	{
 		$this->keyrest->key($key);
-		$jabatan = $this->jabatan_m->selectBy('kd_jabatan', $id);
+		$jabatan = $this->jabatan_m->selectBy($field, $data);
 		echo  json_encode($jabatan);
 	}
 

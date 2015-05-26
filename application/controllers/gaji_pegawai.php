@@ -15,10 +15,10 @@ class Gaji_pegawai extends CI_Controller {
 		echo  json_encode($gaji_pegawai);
 	}
 
-	function getBy($id, $key)
+	function getBy($field, $data, $key)
 	{
 		$this->keyrest->key($key);
-		$gaji_pegawai = $this->gaji_pegawai_m->selectBy('kd_gaji_pegawai', $id);
+		$gaji_pegawai = $this->gaji_pegawai_m->selectBy($field, $data);
 		echo  json_encode($gaji_pegawai);
 	}
 

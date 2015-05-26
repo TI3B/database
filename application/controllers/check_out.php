@@ -15,10 +15,10 @@ class Check_out extends CI_Controller {
 		echo  json_encode($check_out);
 	}
 
-	function getBy($id, $key)
+	function getBy($field, $data, $key)
 	{
 		$this->keyrest->key($key);
-		$check_out = $this->check_out_m->selectBy('kd_check_out', $id);
+		$check_out = $this->check_out_m->selectBy($field, $data);
 		echo  json_encode($check_out);
 	}
 

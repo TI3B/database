@@ -15,10 +15,10 @@ class Barang extends CI_Controller {
 		echo  json_encode($barang);
 	}
 
-	function getBy($id, $key)
+	function getBy($field, $data, $key)
 	{
 		$this->keyrest->key($key);
-		$barang = $this->barang_m->selectBy('kd_barang', $id);
+		$barang = $this->barang_m->selectBy($field, $data);
 		echo  json_encode($barang);
 	}
 

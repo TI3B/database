@@ -15,10 +15,10 @@ class Tipe_kamar extends CI_Controller {
 		echo  json_encode($tipe_kamar);
 	}
 
-	function getBy($id, $key)
+	function getBy($field, $data, $key)
 	{
 		$this->keyrest->key($key);
-		$tipe_kamar = $this->tipe_kamar_m->selectBy('kd_tipe_kamar', $id);
+		$tipe_kamar = $this->tipe_kamar_m->selectBy($field, $data);
 		echo  json_encode($tipe_kamar);
 	}
 

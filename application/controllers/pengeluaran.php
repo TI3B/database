@@ -15,10 +15,10 @@ class Pengeluaran extends CI_Controller {
 		echo  json_encode($pengeluaran);
 	}
 
-	function getBy($id, $key)
+	function getBy($field, $data, $key)
 	{
 		$this->keyrest->key($key);
-		$pengeluaran = $this->pengeluaran_m->selectBy('kd_pengeluaran', $id);
+		$pengeluaran = $this->pengeluaran_m->selectBy($field, $data);
 		echo  json_encode($pengeluaran);
 	}
 

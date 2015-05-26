@@ -15,10 +15,10 @@ class Pegawai extends CI_Controller {
 		echo  json_encode($pegawai);
 	}
 
-	function getBy($id, $key)
+	function getBy($field, $data, $key)
 	{
 		$this->keyrest->key($key);
-		$pegawai = $this->pegawai_m->selectBy('kd_pegawai', $id);
+		$pegawai = $this->pegawai_m->selectBy($field, $data);
 		echo  json_encode($pegawai);
 	}
 

@@ -15,10 +15,10 @@ class Kamar extends CI_Controller {
 		echo  json_encode($kamar);
 	}
 
-	function getBy($id, $key)
+	function getBy($field, $data, $key)
 	{
 		$this->keyrest->key($key);
-		$kamar = $this->kamar_m->selectBy('kd_kamar', $id);
+		$kamar = $this->kamar_m->selectBy($field, $data);
 		echo  json_encode($kamar);
 	}
 

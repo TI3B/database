@@ -15,10 +15,10 @@ class Data_penyewa extends CI_Controller {
 		echo  json_encode($data_penyewa);
 	}
 
-	function getBy($id, $key)
+	function getBy($field, $data, $key)
 	{
 		$this->keyrest->key($key);
-		$data_penyewa = $this->data_penyewa_m->selectBy('kd_data_penyewa', $id);
+		$data_penyewa = $this->data_penyewa_m->selectBy($field, $data);
 		echo  json_encode($data_penyewa);
 	}
 

@@ -15,10 +15,10 @@ class Check_in extends CI_Controller {
 		echo  json_encode($check_in);
 	}
 
-	function getBy($id, $key)
+	function getBy($field, $data, $key)
 	{
 		$this->keyrest->key($key);
-		$check_in = $this->check_in_m->selectBy('kd_check_in', $id);
+		$check_in = $this->check_in_m->selectBy($field, $data);
 		echo  json_encode($check_in);
 	}
 

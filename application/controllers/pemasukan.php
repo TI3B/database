@@ -15,10 +15,10 @@ class Pemasukan extends CI_Controller {
 		echo  json_encode($pemasukan);
 	}
 
-	function getBy($id, $key)
+	function getBy($field, $data, $key)
 	{
 		$this->keyrest->key($key);
-		$pemasukan = $this->pemasukan_m->selectBy('kd_pemasukan', $id);
+		$pemasukan = $this->pemasukan_m->selectBy($field, $data);
 		echo  json_encode($pemasukan);
 	}
 
