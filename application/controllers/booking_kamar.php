@@ -1,45 +1,45 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Kamar extends CI_Controller {
+class Booking_kamar extends CI_Controller {
 
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->model('kamar_m');
+		$this->load->model('booking_kamar_m');
 	}
 
 	function getAll($key)
 	{
 		$this->keyrest->key($key);
-		$kamar = $this->kamar_m->selectAll();
-		echo  json_encode($kamar);
+		$booking_kamar = $this->booking_kamar_m->selectAll();
+		echo  json_encode($booking_kamar);
 	}
 
 	function getBy($id, $key)
 	{
 		$this->keyrest->key($key);
-		$kamar = $this->kamar_m->selectBy('kd_kamar', $id);
-		echo  json_encode($kamar);
+		$booking_kamar = $this->booking_kamar_m->selectBy('kd_booking_kamar', $id);
+		echo  json_encode($booking_kamar);
 	}
 
 	function postInsert($key)
 	{
 		$this->keyrest->key($key);
 		$data = json_decode(file_get_contents("php://input"));
-        $this->kamar_m->insert($data);
+        $this->booking_kamar_m->insert($data);
 	}
 
 	function postUpdate($id, $key)
 	{
 		$this->keyrest->key($key);
 		$data = json_decode(file_get_contents("php://input"));
-        echo  $this->kamar_m->update($data, $id);
+        echo  $this->booking_kamar_m->update($data, $id);
 	}
 
 	function delete($id, $key)
 	{
 		$this->keyrest->key($key);
-        echo  $this->kamar_m->delete($id);
+        echo  $this->booking_kamar_m->delete($id);
 	}
 
 }

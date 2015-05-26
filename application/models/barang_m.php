@@ -1,10 +1,10 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Kamar_m extends CI_Model
+class Barang_m extends CI_Model
 {
 
-  public $table = "tb_kamar";
-  public $id = "kd_kamar";
+  public $table = "tb_barang";
+  public $id = "kd_barang";
 
   function selectAll()
   {

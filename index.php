@@ -1,7 +1,5 @@
 <?php
 
-//Ini aku yang edita
-
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
